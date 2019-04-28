@@ -13,3 +13,16 @@ Firstly, why do we need to worry about change detection in Angular ?
 
 
   OnPush: This takes care of running change detection in the child component only when the @Input changes
+
+
+  If you have a change in comp 2 -> like say setting a local var to a different value then the Angular runs the change detection in this way
+      App -> Child one  -> Child two
+
+    During the change detection it re-evaluates all the template expressions like methods or getters etc
+
+    If you have a change in comp 1 -> like say setting a local var to a different value then the Angular runs the change detection in this way
+      App -> Child one 
+
+      Wait, then what's with the Child two comp ? Well, we have updated all the component change detection strtegy to OnPush and that tells agular that there is no input change so no need to run the change detection
+
+      
