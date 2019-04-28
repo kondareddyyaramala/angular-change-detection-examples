@@ -9,6 +9,7 @@ import { Component, ViewChild, ElementRef, ChangeDetectionStrategy } from '@angu
 export class AppComponent {
   @ViewChild('inputRef') input: ElementRef;
   name = null;
+  translatedText = null;
 
   setName(){
     this.name = this.input.nativeElement.value;
@@ -17,5 +18,10 @@ export class AppComponent {
   get title(){
     console.log('App comp:: Get title');
     return 'Change detection Example';
+  }
+
+  onValueChange(event){
+    console.log(event.target.value);
+    this.translatedText = event.target.value;
   }
 }

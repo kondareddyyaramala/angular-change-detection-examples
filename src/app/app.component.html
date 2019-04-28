@@ -1,7 +1,10 @@
 <div>
-   <div> {{ title }}</div>
+   <!-- <div> {{ title }}</div>
    <input #inputRef>
    <button (click)="setName()"> Set Name in Child comp </button>
-   <app-child-one [name]="name"></app-child-one>
+   <app-child-one [name]="name"></app-child-one> -->
+
+   <div> {{ translatedText }}</div>
+   <input appFocusOne  appFocusTwo   (change)="onValueChange($event)">
    
 </div>
