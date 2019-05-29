@@ -4,16 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ChildOneComponent } from './components/child-one/child-one.component';
 import { ChildTwoComponent } from './components/child-two/child-two.component';
-import { FocusDirectiveDirective } from './directives/focus-directive.directive';
+import { FocusOneDirective } from './directives/focus-one.directive';
 import { FocusTwoDirective } from './directives/focus-two.directive';
+import { CurrencyDirective } from './directives/currency.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildOneComponent,
     ChildTwoComponent,
-    FocusDirectiveDirective,
-    FocusTwoDirective
+    FocusOneDirective,
+    FocusTwoDirective,
+    CurrencyDirective
   ],
   imports: [
     BrowserModule
