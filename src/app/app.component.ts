@@ -1,6 +1,5 @@
-import { Component, ViewChild, ElementRef, ChangeDetectionStrategy, ViewRef, ViewContainerRef, ComponentFactory, ComponentFactoryResolver } from '@angular/core';
-import { UrlResolver } from '@angular/compiler';
-
+import { Component, ViewChild, ElementRef, ChangeDetectionStrategy, ViewRef, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,11 +12,23 @@ export class AppComponent {
   translatedText = null;
   value = null;
 
+  public counts = Array(10).fill('').map((_v, i) => `Value ${i}`);
+
+  formGroup: FormGroup = null;
+
 
   constructor(private viewRef: ViewRef, private vcRef: ViewContainerRef,
-    private compResol: ComponentFactoryResolver){
-    console.log('App comp constructor');
+    private compResol: ComponentFactoryResolver, private fb: FormBuilder) {
     this.value = '1234';
+    this.formGroup = this.fb.group({ 
+      name: ['', [Validators.minLength(10)]],
+      lastName: ['', [Validators.minLength(14)]],
+      count: ['']
+    });
+
+    this.formGroup.get('count').valueChanges.subscribe(v => {
+      console.log('Form Value change ap comp  ' + v);
+    });
   }
 
   setName() {

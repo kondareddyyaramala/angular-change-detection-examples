@@ -7,6 +7,8 @@ import { ChildTwoComponent } from './components/child-two/child-two.component';
 import { FocusOneDirective } from './directives/focus-one.directive';
 import { FocusTwoDirective } from './directives/focus-two.directive';
 import { CurrencyDirective } from './directives/currency.directive';
+import { FormDirective } from './directives/form.directive';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,13 @@ import { CurrencyDirective } from './directives/currency.directive';
     ChildTwoComponent,
     FocusOneDirective,
     FocusTwoDirective,
-    CurrencyDirective
+    CurrencyDirective,
+    FormDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

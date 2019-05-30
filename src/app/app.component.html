@@ -8,6 +8,20 @@
    <input appFocusOne  appFocusTwo  (change)="onValueChange($event)">
     -->
 
-    <input  [value]= "value" appCurrency (blur)="onBlur($event)">
+    <!-- <input  [value]= "value" appCurrency (blur)="onBlur($event)"> -->
+
+    <!-- <div [formGroup]="formGroup">
+        <input appForm formControlName="name">
+        <textarea appForm formControlName="lastName"></textarea>
+        <select appForm formControlName="count">
+            <option *ngFor="let c of counts" [ngValue]="c">{{ c }}</option>
+        </select>
+    </div> -->
+
+
+    <!-- The directives can also be applied to the components and the events from the nested and child
+    elements would bubble up to the parent -->
+    <app-child-one appForm [name]="name"></app-child-one>
+    
    
 </div>
