@@ -21,7 +21,7 @@ export class AppComponent {
     private compResol: ComponentFactoryResolver, private fb: FormBuilder) {
     this.value = '1234';
     this.formGroup = this.fb.group({ 
-      name: ['', [Validators.minLength(10)]],
+      name: ['', [Validators.required]],
       lastName: ['', [Validators.minLength(14)]],
       count: ['']
     });

@@ -9,6 +9,7 @@ import { FocusTwoDirective } from './directives/focus-two.directive';
 import { CurrencyDirective } from './directives/currency.directive';
 import { FormDirective } from './directives/form.directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ErrorHandlerDirective } from './directives/error-handler.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FocusOneDirective,
     FocusTwoDirective,
     CurrencyDirective,
-    FormDirective
+    FormDirective,
+    ErrorHandlerDirective
   ],
   imports: [
     BrowserModule,

@@ -21,7 +21,9 @@
 
     <!-- The directives can also be applied to the components and the events from the nested and child
     elements would bubble up to the parent -->
-    <app-child-one appForm [name]="name"></app-child-one>
-    
+    <!-- <app-child-one appForm [name]="name"></app-child-one> -->
+    <div [formGroup]="formGroup">
+        <input appErrorHandler formControlName="name">
+    </div>
    
 </div>
