@@ -23,7 +23,9 @@
     elements would bubble up to the parent -->
     <!-- <app-child-one appForm [name]="name"></app-child-one> -->
     <div [formGroup]="formGroup">
-        <input appErrorHandler formControlName="name">
+        <input capitalize formControlName="name">
     </div>
+
+    <button (click)="logname()">Click to log payload</button>
    
 </div>

@@ -10,6 +10,7 @@ import { CurrencyDirective } from './directives/currency.directive';
 import { FormDirective } from './directives/form.directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ErrorHandlerDirective } from './directives/error-handler.directive';
+import { CapitalizeDirective } from './directives/capitalize.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ErrorHandlerDirective } from './directives/error-handler.directive';
     FocusTwoDirective,
     CurrencyDirective,
     FormDirective,
-    ErrorHandlerDirective
+    ErrorHandlerDirective,
+    CapitalizeDirective
   ],
   imports: [
     BrowserModule,

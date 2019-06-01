@@ -21,7 +21,7 @@ export class AppComponent {
     private compResol: ComponentFactoryResolver, private fb: FormBuilder) {
     this.value = '1234';
     this.formGroup = this.fb.group({ 
-      name: ['', [Validators.required]],
+      name: ['aaaasa', [Validators.required]],
       lastName: ['', [Validators.minLength(14)]],
       count: ['']
     });
@@ -33,6 +33,10 @@ export class AppComponent {
 
   setName() {
     this.name = this.input.nativeElement.value;
+  }
+
+  logname(){
+    console.log('Payload ::: '+ JSON.stringify(this.formGroup.value));
   }
 
   get title() {
