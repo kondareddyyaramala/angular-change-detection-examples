@@ -10,7 +10,7 @@ export class ChildTwoComponent {
   private _localVar: string;
   
    get desc(){
-     console.log('Child two :: get description');
+    //  console.log('Child two :: get description');
      return 'Child two component';
    }
 
@@ -19,8 +19,12 @@ export class ChildTwoComponent {
     this._localVar = 'Child two :: local var' + Math.random();
   }
 
+  ngDoCheck(changes) {
+    console.log('Two comp');
+  }
+
   get localVar(){
-    console.log('Child two :: Get local')
+    // console.log('Child two :: Get local')
     return this._localVar;
   }
 }

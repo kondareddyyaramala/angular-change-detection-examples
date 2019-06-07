@@ -31,6 +31,10 @@ export class AppComponent {
     });
   }
 
+  ngDoCheck(changes) {
+    console.log('App comp');
+  }
+
   setName() {
     this.name = this.input.nativeElement.value;
   }

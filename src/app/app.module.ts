@@ -11,6 +11,7 @@ import { FormDirective } from './directives/form.directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ErrorHandlerDirective } from './directives/error-handler.directive';
 import { CapitalizeDirective } from './directives/capitalize.directive';
+import { GrandChildOneComponent } from './components/grand-child-one/grand-child-one.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CapitalizeDirective } from './directives/capitalize.directive';
     CurrencyDirective,
     FormDirective,
     ErrorHandlerDirective,
-    CapitalizeDirective
+    CapitalizeDirective,
+    GrandChildOneComponent
   ],
   imports: [
     BrowserModule,
