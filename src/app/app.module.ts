@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ErrorHandlerDirective } from './directives/error-handler.directive';
 import { CapitalizeDirective } from './directives/capitalize.directive';
 import { GrandChildOneComponent } from './components/grand-child-one/grand-child-one.component';
+import { ObjReferenceDetetctionComponent } from './components/obj-reference-detetction/obj-reference-detetction.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { GrandChildOneComponent } from './components/grand-child-one/grand-child
     FormDirective,
     ErrorHandlerDirective,
     CapitalizeDirective,
-    GrandChildOneComponent
+    GrandChildOneComponent,
+    ObjReferenceDetetctionComponent
   ],
   imports: [
     BrowserModule,

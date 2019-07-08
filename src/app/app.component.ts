@@ -11,6 +11,7 @@ export class AppComponent {
   name = null;
   translatedText = null;
   value = null;
+  private _obj = new String('This is object');
 
   public counts = Array(10).fill('').map((_v, i) => `Value ${i}`);
 
@@ -55,5 +56,14 @@ export class AppComponent {
   onBlur(event) {
     console.log('App component  ' + event.target.value);
     this.translatedText = event.target.value;
+  }
+
+  get stringObj(){
+    console.log('String object');
+    return this._obj.bold();
+  }
+
+  counterClick(){
+    // this.counter++;
   }
 }

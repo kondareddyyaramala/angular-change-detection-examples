@@ -21,11 +21,13 @@
 
     <!-- The directives can also be applied to the components and the events from the nested and child
     elements would bubble up to the parent -->
-    <app-child-one appForm [name]="name"></app-child-one>
+    <!-- <app-child-one appForm [name]="name"></app-child-one> -->
     <!-- <div [formGroup]="formGroup">
         <input capitalize formControlName="name">
     </div>
 
     <button (click)="logname()">Click to log payload</button> -->
 
+    <app-obj-reference-detetction [stringObj]="stringObj"></app-obj-reference-detetction>
+    <button (click)="counterClick()">Click Me This Button!</button>
 </div>
