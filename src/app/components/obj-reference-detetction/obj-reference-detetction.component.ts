@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-obj-reference-detetction',
@@ -6,7 +6,7 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
   styleUrls: ['./obj-reference-detetction.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ObjReferenceDetetctionComponent {
+export class ObjReferenceDetetctionComponent implements DoCheck { 
   public counter = 0;
   @Input() stringObj: String;
 
