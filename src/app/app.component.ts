@@ -54,7 +54,7 @@ export class AppComponent {
     this.translatedText = event.target.value;
   }
   onBlur(event) {
-    console.log('App component  ' + event.target.value);
+    console.log('App component    ' + event.target.value);
     this.translatedText = event.target.value;
   }
 
