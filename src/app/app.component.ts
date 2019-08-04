@@ -50,7 +50,7 @@ export class AppComponent {
   }
 
   onValueChange(event) {
-    console.log('App component  ' + event.target.value);
+    console.log('App componen ' + event.target.value);
     this.translatedText = event.target.value;
   }
   onBlur(event) {
